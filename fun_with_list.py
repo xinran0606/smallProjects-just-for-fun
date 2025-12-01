@@ -76,6 +76,8 @@ def c_find_number_tuple():
         print("Thanks for using.")
         quit()
 
-print(a_words_to_number())
-print(b_number_insert_list())
-print(c_find_number_tuple())
+if __name__ == "__main__":
+
+    print(a_words_to_number())
+    print(b_number_insert_list())
+    print(c_find_number_tuple())
