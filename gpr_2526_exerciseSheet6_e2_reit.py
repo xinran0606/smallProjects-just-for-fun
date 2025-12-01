@@ -7,6 +7,10 @@ def ackermann_function(n,m):
         return ackermann_function(n-1, ackermann_function(n, m-1))
 
 def rewrite_recursive_funktion(n):
+
+    # Recursiv fuction looks like: f(n) = --- 1                 n<=1
+    #                                     --- f(n-1) + f(n-3)   otherwise
+
     if n <= 1:
         return 1
 
