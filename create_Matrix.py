@@ -6,7 +6,7 @@ def create_matrix(n, m):
 
     for i in range(n):
         for j in range(m):
-            matrix[(i,j)] = random.randint(-2000, 4000)
+            matrix[(i+1,j+1)] = random.randint(-2000, 4000) # Mathmatical matrix start with (1,1)
     print("--------------------------------------\n")
     print("Here is matrix in dictionary form")
     return matrix
@@ -16,7 +16,7 @@ def print_matrix_form_dic(matx, n ,m):
     for i in range(n):
         row = []
         for j in range(m):
-            row.append(str(matx[(i,j)]))
+            row.append(str(matx[(i+1,j+1)]))
         print("(" + " ".join(row) + ")")
 
 def format_matrix(mtrx, n, m):
@@ -24,7 +24,7 @@ def format_matrix(mtrx, n, m):
     for i in range(n):
         row = []
         for j in range(m):
-            val_str = str(mtrx[(i, j)])                # or
+            val_str = str(mtrx[(i+1, j+1)])                # or
             if len(val_str) < 5:                       # val_str = str(mtrx[(i, j)]).rjust(5)
                 for h in range(5-len(val_str)):
                     val_str = " " + val_str
@@ -51,6 +51,8 @@ if __name__ == "__main__":
             print("Invalid input. Bitte geben Sie eine Integer größer als 1")
 
     userMatix = create_matrix(userInput_n, userInput_m)
+    print(userMatix)
+    print("--------------------------------------\n")
     print_matrix_form_dic(userMatix, userInput_n, userInput_m)
     print("--------------------------------------\n")
     print("die Matrix so aus, dass die Zahlen rechtsbündig ausgerichtet sind.")
