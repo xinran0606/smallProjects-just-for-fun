@@ -71,7 +71,7 @@ def c_find_number_tuple():
     print("No tuple found with first entry, do you want to try again?")
     x = input("Yes or click on any one to quit:").lower()
     if x == "yes":
-        c_find_number_tuple()
+        return c_find_number_tuple()
     else:
         print("Thanks for using.")
         quit()

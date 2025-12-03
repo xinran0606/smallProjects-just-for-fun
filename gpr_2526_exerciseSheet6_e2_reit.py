@@ -27,4 +27,4 @@ def rewrite_recursive_funktion(n):
 
 if __name__ == "__main__":
     print(ackermann_function(0,1))
-    print(rewrite_recursive_funktion(6))
+    print(rewrite_recursive_funktion(5))
